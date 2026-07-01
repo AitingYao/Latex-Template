@@ -1,0 +1,23 @@
+模板使用说明
+├── main.tex                 # 主文件，项目入口
+├── preamble.tex             # 导言区，存放所有宏包和格式设置
+├── body/                    # 存放所有正文内容的文件夹
+│   ├── abstract.tex         # 摘要
+│   ├── introduction.tex     # 引言
+│   ├── method.tex           # 方法
+│   ├── experiment.tex       # 实验
+│   ├── conclusion.tex       # 结论
+│   └── ...                  # 其他章节
+├── figures/                 # 存放所有图片
+│   ├── fig1.png
+│   └── fig2.pdf             # 建议使用pdf清晰
+└── reference.bib            # 参考文献数据库
+
+
+% 在 body/introduction.tex 中引用图片
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\linewidth]{figures/fig1.png}
+    \caption{这是一个示例图}
+    \label{fig:example}
+\end{figure}

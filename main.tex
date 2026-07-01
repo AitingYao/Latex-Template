@@ -1,0 +1,41 @@
+% ！！！这是唯一需要根据投稿期刊修改的地方！！！
+% 假设投的是 IEEE 会议，就改成\documentclass[conference]{IEEEtran}
+%% ******根据投稿期刊/会修改******
+\documentclass{article} % 默认用 article 模板
+
+% 加载格式和宏包设置
+\input{preamble}
+
+\begin{document}
+
+% 标题和作者信息（某些模板可能会有不同的写法）
+\title{Paper title}
+\author{authors'name}
+\maketitle
+
+% 引用摘要
+\begin{abstract}
+    \input{body/0-abstract}
+\end{abstract}
+
+% 引用正文各部分
+\section{Introduction} 
+\input{body/1-introduction}
+
+\section{Related Work}
+\input{body/2-relatedwork}
+
+\section{Method}
+\input{body/3-method}
+
+\section{Experiment}
+\input{body/4-experiment}
+
+\section{Conclusion}
+\input{body/5-conclusion}
+
+% 参考文献（不同模板引用的方式可能不同，比如 IEEE 用 \bibliographystyle{IEEEtran}）
+\bibliographystyle{plain}
+\bibliography{reference}
+
+\end{document}
